@@ -1,0 +1,60 @@
+[
+    {
+        "id": "tools",
+        "children":
+        [
+            {
+                "id": "end"
+            },
+            {
+                "caption": "Blame Highlighter",
+                "children":
+                [
+                    {
+                        "caption": "Highlight code from git blame",
+                        "command": "see_my_code"
+                    },
+                    {
+                        "caption": "Remove code highlight",
+                        "command": "clear_blame_highlights"
+                    },
+                    {
+                        "caption": "-"
+                    },
+                    {
+                        "caption": "Settings - User",
+                        "command": "open_file",
+                        "args"   : {"file" : "${packages}/User/BlameHighlight.sublime-settings"}
+                    }
+                ]
+            },
+        ]
+    },
+    {
+        "caption": "Preferences",
+        "mnemonic": "n",
+        "id": "preferences",
+        "children":
+        [
+            {
+                "caption": "Package Settings",
+                "mnemonic": "P",
+                "id": "package-settings",
+                "children":
+                [
+                    {
+                        "caption": "Blame Highlighter",
+                        "children":
+                        [
+                            {
+                                "caption": "Settings – User",
+                                "command": "open_file",
+                                "args": {"file": "${packages}/User/BlameHighlight.sublime-settings"}
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
