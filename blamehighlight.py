@@ -57,7 +57,10 @@ class SeeMyCode(sublime_plugin.TextCommand):
 		dirName = os.path.dirname(fileName)
 		os.chdir(dirName)
 		if get_return_code([git_command, "rev-parse"]) == 0:
-			email = get_stdout_string([git_command, "config", "user.email"])
+			if self.settings.get ("author_email"):
+				email = self.settings.get ("author_email")
+			else :
+				email = get_stdout_string([git_command, "config", "user.email"])
 			email = email.splitlines()
 			email = email[0]
 			gitLines = extract_user_lines(dirName, fileName, email, git_command)

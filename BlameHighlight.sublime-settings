@@ -3,5 +3,6 @@
 	// 
 	// If you're on Linux/OSX you can provide a direct path to a git binary as well. If set to "false" it picks
 	// up git from your $PATH
-    "git_command": false
+    "git_command": false,
+    "author_email": false // Replace with another Git author's email to highlight
 }
